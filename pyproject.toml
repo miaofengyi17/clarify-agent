@@ -1,0 +1,30 @@
+[project]
+name = "clarify-agent"
+version = "0.1.0"
+description = "一个兼容 OpenAI API 的中间件，自动为大模型应用加上主动澄清和上下文面板能力"
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.9"
+authors = [{ name = "你的名字", email = "you@example.com" }]
+dependencies = [
+    "fastapi>=0.115.0",
+    "uvicorn[standard]>=0.32.0",
+    "httpx>=0.27.2",
+    "pydantic>=2.9.2",
+    "python-dotenv>=1.0.1",
+    "openai>=1.54.0",
+    "redis>=5.1.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.3.3"]
+
+[project.scripts]
+clarify-agent = "clarify_agent.__main__:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]

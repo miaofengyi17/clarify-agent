@@ -1,0 +1,26 @@
+# 环境变量（含真实 Key，绝对不能上传）
+.env
+
+# 虚拟环境
+.venv/
+venv/
+env/
+
+# Python 缓存
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# 测试缓存
+.pytest_cache/
+
+# IDE
+.idea/
+.vscode/
+
+# 操作系统
+.DS_Store
+Thumbs.db
+
+# 日志
+*.log
